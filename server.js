@@ -7,6 +7,8 @@ app.use(cors());
 
 const data = require("./data/weather.json");
 
+app.get("/", (_, response) => response.json("Root router."));
+
 app.get("/weather", (request, response) => {
   const lat = request.query.lat;
   const lon = request.query.lon;
